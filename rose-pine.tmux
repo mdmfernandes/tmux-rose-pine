@@ -199,7 +199,7 @@ main() {
     readonly show_network="$spacer#[fg=$thm_pine]$network#[fg=$thm_subtle]$right_separator#[fg=$thm_subtle]$network_icon$spacer"
 
     local show_date_time
-    readonly show_date_time="$spacer#[fg=$thm_rose]$date_time#[fg=$thm_subtle]$right_separator#[fg=$thm_subtle]$date_time_icon$spacer"
+    readonly show_date_time="$spacer#[fg=$thm_rose]$date_time#[fg=$thm_subtle] " # $right_separator#[fg=$thm_subtle]$date_time_icon$spacer"
 
     # Windows format
     setw window-status-format "$show_window_in_window_status"
