@@ -173,7 +173,7 @@ main() {
     readonly date_time_icon
 
     local right_separator
-    right_separator="$(get_tmux_option "@rose_pine_right_separator" "  ")"
+    right_separator="$(get_tmux_option "@rose_pine_right_separator" " ")"
 
     local left_separator
     left_separator="$(get_tmux_option "@rose_pine_left_separator" ":")"
@@ -193,10 +193,10 @@ main() {
     readonly show_session=" #[fg=#{?client_prefix,$thm_foam,$thm_text}]$current_session_icon #[fg=$thm_text]#S "
 
     local show_resources
-    readonly show_resources="#[fg=$thm_iris]$cpu #[fg=$thm_iris]$ram#[fg=$thm_subtle]$right_separator#[fg=$thm_subtle]$resources_icon$spacer"
+    readonly show_resources="#[fg=$thm_iris]$cpu #[fg=$thm_iris]$ram#[fg=$thm_subtle]$right_separator#[fg=$thm_subtle]$resources_icon"
 
     local show_network
-    readonly show_network="$spacer#[fg=$thm_pine]$network#[fg=$thm_subtle]$right_separator#[fg=$thm_subtle]$network_icon$spacer"
+    readonly show_network="$spacer#[fg=$thm_pine]$network#[fg=$thm_subtle]$right_separator#[fg=$thm_subtle]$network_icon"
 
     local show_date_time
     readonly show_date_time="$spacer#[fg=$thm_rose]$date_time#[fg=$thm_subtle] " # $right_separator#[fg=$thm_subtle]$date_time_icon$spacer"
