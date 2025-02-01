@@ -128,8 +128,8 @@ main() {
     setw window-status-current-style "fg=${thm_gold},bg=${thm_base},reverse"
     setw window-status-last-style "fg=${thm_foam},bg=${thm_base}"
     setw window-status-separator ""
-    setw window-status-activity-style blink
-    setw window-status-bell-style blink
+    setw window-status-activity-style "blink,underscore"
+    setw window-status-bell-style "blink,underscore"
 
     # Statusline base command configuration: No need to touch anything here
     # Placement is handled below
@@ -212,6 +212,8 @@ main() {
 
     # Right status and organization
     local right_column
+
+    right_column=$spacer$right_column
 
     if [[ "$cpu" != "" ]] && [[ "$ram" != "" ]]; then
         right_column=$right_column$show_resources
