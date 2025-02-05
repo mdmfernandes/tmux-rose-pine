@@ -128,6 +128,8 @@ main() {
     setw window-status-current-style "fg=${thm_gold},bg=${thm_base},reverse"
     setw window-status-last-style "fg=${thm_foam},bg=${thm_base}"
     setw window-status-separator ""
+    # TODO: remove `underscore` when blink works in all tty's that I use.
+    # For ghostty, see https://github.com/ghostty-org/ghostty/discussions/4258
     setw window-status-activity-style "blink,underscore"
     setw window-status-bell-style "blink,underscore"
 
@@ -234,7 +236,7 @@ main() {
     # tmux integrated modes
 
     setw clock-mode-colour "${thm_love}"
-    setw mode-style "fg=${thm_gold}"
+    setw mode-style "fg=${thm_base},bg=${thm_gold}"
 
     # Call everything to action
 
